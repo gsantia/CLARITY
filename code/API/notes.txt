@@ -1,0 +1,5 @@
+- statistics of user response times
+- how three different groups respond, response rates
+- response times across veracity categories?
+- make notebook with response times, bots vs. humans
+-

@@ -1,3 +1,6 @@
 /data/THREADS.json
 /data/USERS.json
 /data/TRAIN.json
+
+# Don't need these temp files
+*.pyc
