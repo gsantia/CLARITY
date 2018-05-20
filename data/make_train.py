@@ -31,4 +31,21 @@ def create():
     shuffle(TRAIN)
 
     with open('TRAIN.json', 'w') as f3:
-json.dump(TRAIN, f3, indent = 4, sort_keys = True)
+        json.dump(TRAIN, f3, indent = 4, sort_keys = True)
+
+def strip_extra():
+    """
+    Get rid of the keys we don't need, stuff having to do with
+    thread structure.
+    """
+    with open('TRAIN.json', 'r') as f:
+        TRAIN = json.load(f)
+
+    for comment in TRAIN:
+        del comment['rep_index']
+        del comment['top_index']
+
+    with open('TRAIN.json', 'w') as f2:
+        json.dump(TRAIN, f2, indent = 4, sort_keys = True)
+
+
